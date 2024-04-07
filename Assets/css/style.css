@@ -1,0 +1,17 @@
+header {
+    background-color: lightblue;
+    width: 100%;
+    line-height: 200px;
+}
+
+
+#side-bar {
+    background-color: darkblue;
+    color: aqua;
+    line-height: 600px;
+    width: 200px;
+}
+
+body {
+    margin: 0;
+}
