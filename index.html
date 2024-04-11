@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
 <body>
 
-    <header class="header">This will be the header</header>
+    <header class="header container-fluid bg-light text-dark mb-3 p-3">
+        <div class="d-flex align-items-center">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
 
     <main>
-        This is where most content will be written
+        <h1>This is where most content will be written</h1>
 
         <div id="side-bar">Sidebar for recent search results</div>
 
@@ -19,7 +24,7 @@
 
     <div id="location-form">
         <form action="">
-            <label for="text-input">Enter Your Location</label>
+            <label for="text-input">Enter The Name of a City</label>
             <input type="text" name="location" id="location-input">
             <button id="enter-btn">Enter</button>
         </form>
@@ -30,7 +35,7 @@
 
     <footer>This may be unnecessary</footer>
 
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
     <script src="./Assets/js/script.js"></script>
 </body>
 </html>
