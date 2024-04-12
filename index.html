@@ -9,31 +9,35 @@
 </head>
 <body>
 
-    <header class="header container-fluid bg-light text-dark mb-3 p-3">
-        <div class="d-flex align-items-center">
+    <header>
+        <div>
             <h1>Weather Dashboard</h1>
         </div>
     </header>
 
-    <main>
-        <h1>This is where most content will be written</h1>
+<main>
+
+<div id="page">
+        <h1 id="content">Select the city to view the weather</h1>
 
         <div id="side-bar">Sidebar for recent search results</div>
 
-        <div id="current-weather">For displaying the current weather</div>
+        <div id="current-weather"></div>
+        <div id="tomorrow-weather"></div>
+        <div id="two-day-weather"></div>
 
     <div id="location-form">
         <form action="">
-            <label for="text-input">Enter The Name of a City</label>
-            <input type="text" name="location" id="location-input">
+            <label for="text-input"></label>
+            <input type="text" name="location" id="location-input" placeholder="Enter the name of a City">
             <button id="enter-btn">Enter</button>
         </form>
     </div>
+
+</div>
     </main>
 
-    <ul id="results">This is where search results of the future will be generated</ul>
-
-    <footer>This may be unnecessary</footer>
+    <ul id="results"></ul>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
     <script src="./Assets/js/script.js"></script>
