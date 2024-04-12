@@ -1,3 +1,4 @@
+//Variables set for elements retrieved from html using jquery
 var listResult = $('#results');
 var textInput = $('#location-input');
 var btn = $('#enter-btn');
@@ -5,7 +6,7 @@ var sideBar = $('#side-bar');
 var main = $('#content');
 
 
-
+//Function for data request providing latitude and longitude to openweather.org
 function getApi(lat, lon){
     
     var requestUrl = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lon=' + lon + '&appid=9dec3bfde1150c1cb8327213d953611b';
@@ -17,6 +18,7 @@ function getApi(lat, lon){
     .then(function(data){
         console.log(data);
 
+        //Elements created for displaying response  
         var zip = JSON.parse(localStorage.getItem('zip'));
         var cityName = $('<h1>');
         var weatherIcon = $('h2');
@@ -25,6 +27,7 @@ function getApi(lat, lon){
         displayWeather.append(weatherIcon);
         cityName.text(zip);
 
+        //Weather Icon display function
         var weatherIconDisplay = function(iconPic){
             weatherIcon.text(iconPic);
         }
@@ -42,6 +45,7 @@ function getApi(lat, lon){
             icon(pic);
         }
 
+        //Creation of elements to display date, temp, windspeed etc
         var date = $('<p>');
         displayWeather.append(date);
         date.text('Current Date and Time in Unix' + ' ' + data.current.dt);
@@ -62,7 +66,7 @@ function getApi(lat, lon){
 }
 
 
-
+//Function for retrieving lat and lon specific to city entered
 var searchApi = function(){
     var zip = JSON.parse(localStorage.getItem('zip'));
     var requestGeocoding = 'http://api.openweathermap.org/geo/1.0/direct?q='+ zip + '&limit=5&appid=9dec3bfde1150c1cb8327213d953611b';
@@ -95,7 +99,7 @@ var searchApi = function(){
 
     console.log(zip);
 }
-
+//function to be called upon start of page
 searchApi();
 
 
